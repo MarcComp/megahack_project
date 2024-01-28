@@ -1,8 +1,7 @@
 // Home.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import HomepageImage from '../components/HomepageImage';
 import { Typography, Grid, Button, TextField} from '@mui/material';
-import DownloadIcon from '@mui/icons-material/Download';
 
 
 
@@ -31,15 +30,29 @@ const Home = () => {
 
     return (
       <>
-          <Typography></Typography>
+          <Typography variant="h2" align="center"><u>De-Hashing & Education</u></Typography>
           
-
           <Grid container spacing={2} align="center" justify="center" alignItems="center">
               <Grid item xs={12} sm={12} md={12}></Grid>
               <Grid item xs={12} sm={12} md={12}></Grid>
-              <Grid item xs={12} sm={12} md={12}></Grid>
-              <Grid item xs={12} sm={12} md={12}></Grid>
+              <Grid item xs={12} sm={12} md={12}><Typography variant="h6"><u>An Introduction to Hashing!</u></Typography></Grid>
+              <Grid item xs={12} sm={12} md={4}></Grid>
+              <Grid item xs={12} sm={12} md={4}>
+                <Typography align="left">Welcome to the world of hashing! Hashing is a fundamental technology used to protect information in the digital age. 
+                            From the 1970s to modern day, hashing has played a crucial role in securing communications and data. 
+                </Typography>
+                
+                <Typography><u>Why Hashing Matters</u></Typography>
+                <Typography align="left">
+                Hashing is vital for maintaining privacy and security. 
+                Primarily, it ensures data integrity by creating unique hash codes for digital content, allowing the detection of any unauthorized modifications during transmission or storage. 
+                In password security, hashing transforms passwords into irreversible hash values, enhancing the security of stored credentials. 
+                It plays a vital role in digital signatures, verifying message authenticity and sender identity.  
+                In essence, hashing is fundamental for maintaining the integrity, security, and authenticity of digital data.
+                </Typography>
 
+              </Grid>
+              <Grid item xs={12} sm={12} md={4}></Grid>
               <Grid item xs={12} sm={12} md={2}></Grid>
               <Grid item xs={12} sm={12} md={2}></Grid>
               <Grid item xs={12} sm={12} md={2}>
@@ -55,13 +68,14 @@ const Home = () => {
               <Grid item xs={12} sm={12} md={2}>
                 <Button variant="outlined" onClick={handleButtonClick}>De-Hash</Button>
               </Grid>
-              <Grid item xs={12} sm={12} md={2}>
-                <Button variant="outlined">Download<DownloadIcon></DownloadIcon></Button>
-              </Grid>
+              <Grid item xs={12} sm={12} md={2}></Grid>
               <Grid item xs={12} sm={12} md={2}></Grid>
               <Grid item xs={12} sm={12} md={2}></Grid>
               
               <Grid item xs={12} sm={12} md={12}></Grid>
+              <Grid item xs={12} sm={12} md={4}></Grid>
+              <Grid item xs={12} sm={12} md={4}> The hash type is:hashtypevariable. The plain text of the hash is:plaintextvariable.</Grid>
+              <Grid item xs={12} sm={12} md={4}></Grid>
               <Grid item xs={12} sm={12} md={12}></Grid>
               <Grid item xs={12} sm={12} md={12}>
                 <HomepageImage/>
