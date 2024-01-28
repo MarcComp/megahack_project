@@ -5,12 +5,8 @@ import Button from "@mui/material/Button";
 import { Link, useLocation } from "react-router-dom";
 
 const NavBar = () => {
-  const [openDrawer, setOpenDrawer] = useState(false);
   const location = useLocation();
 
-  const toggleDrawer = () => {
-    setOpenDrawer(!openDrawer);
-  };
   return (
     <React.Fragment>
       <AppBar position="static">
