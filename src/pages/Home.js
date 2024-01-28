@@ -83,15 +83,14 @@ const Home = () => {
               <Grid item xs={12} sm={3} md={2}>
                 <Button variant="outlined" onClick={handleButtonClick}>De-Hash</Button>
               </Grid>
-              <Grid item xs={12} sm={12} md={2}>
-                <RevealedHash shouldRender={isVisible} hashName={hashName} hashText={hashText}/>
-              </Grid>
               <Grid item xs={12} sm={12} md={2}></Grid>
               <Grid item xs={12} sm={12} md={2}></Grid>
               
               <Grid item xs={12} sm={12} md={12}></Grid>
               <Grid item xs={12} sm={12} md={4}></Grid>
-              <Grid item xs={12} sm={12} md={4}></Grid>
+              <Grid item xs={12} sm={12} md={4}>
+                <RevealedHash shouldRender={isVisible} hashName={hashName} hashText={hashText}/>
+              </Grid>
               <Grid item xs={12} sm={12} md={4}></Grid>
               <Grid item xs={12} sm={12} md={12}></Grid>
               <Grid item xs={12} sm={12} md={12}>
