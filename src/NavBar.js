@@ -39,14 +39,6 @@ const NavBar = () => {
           >
             Team
           </Button>
-          <Button
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            onClick={toggleDrawer}
-          >
-            History
-          </Button>
         </Toolbar>
       </AppBar>
     </React.Fragment>
