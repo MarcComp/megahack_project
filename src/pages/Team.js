@@ -1,6 +1,15 @@
 // Team.js
 import React from 'react';
 
-const Team = () => <h1>This is the Team Page</h1>;
+const Team = () => {
+    return  <>
+      <h2>Our Team:</h2>
+      <ul>
+        <li>James Allen</li>
+        <li>Marcus Moore</li>
+        <li>Noah Yedigarian</li>
+        </ul>
+     </>
+};
 
 export default Team;
