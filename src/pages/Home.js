@@ -36,8 +36,8 @@ const Home = () => {
               <Grid item xs={12} sm={12} md={12}></Grid>
               <Grid item xs={12} sm={12} md={12}></Grid>
               <Grid item xs={12} sm={12} md={12}><Typography variant="h6"><u>An Introduction to Hashing!</u></Typography></Grid>
-              <Grid item xs={12} sm={12} md={4}></Grid>
-              <Grid item xs={12} sm={12} md={4}>
+              <Grid item xs={12} sm={6} md={4}></Grid>
+              <Grid item xs={12} sm={6} md={4}>
                 <Typography align="left">Welcome to the world of hashing! Hashing is a fundamental technology used to protect information in the digital age. 
                             From the 1970s to modern day, hashing has played a crucial role in securing communications and data. 
                 </Typography>
@@ -52,10 +52,10 @@ const Home = () => {
                 </Typography>
 
               </Grid>
-              <Grid item xs={12} sm={12} md={4}></Grid>
-              <Grid item xs={12} sm={12} md={2}></Grid>
-              <Grid item xs={12} sm={12} md={2}></Grid>
-              <Grid item xs={12} sm={12} md={2}>
+              <Grid item xs={12} sm={6} md={4}></Grid>
+              <Grid item xs={12} sm={3} md={2}></Grid>
+              <Grid item xs={12} sm={3} md={2}></Grid>
+              <Grid item xs={12} sm={3} md={2}>
                 <TextField
                   id="outlined-multiline-static"
                   label="Input Hash Here"
@@ -65,17 +65,17 @@ const Home = () => {
                   onChange={(e) => setTextFieldValue(e.target.value)}
                 />
               </Grid>
-              <Grid item xs={12} sm={12} md={2}>
+              <Grid item xs={12} sm={3} md={2}>
                 <Button variant="outlined" onClick={handleButtonClick}>De-Hash</Button>
               </Grid>
-              <Grid item xs={12} sm={12} md={2}></Grid>
-              <Grid item xs={12} sm={12} md={2}></Grid>
-              <Grid item xs={12} sm={12} md={2}></Grid>
+              <Grid item xs={12} sm={3} md={2}></Grid>
+              <Grid item xs={12} sm={3} md={2}></Grid>
+              <Grid item xs={12} sm={3} md={2}></Grid>
               
               <Grid item xs={12} sm={12} md={12}></Grid>
-              <Grid item xs={12} sm={12} md={4}></Grid>
-              <Grid item xs={12} sm={12} md={4}> The hash type is:hashtypevariable. The plain text of the hash is:plaintextvariable.</Grid>
-              <Grid item xs={12} sm={12} md={4}></Grid>
+              <Grid item xs={12} sm={6} md={4}></Grid>
+              <Grid item xs={12} sm={6} md={4}> The hash type is:hashtypevariable. The plain text of the hash is:plaintextvariable.</Grid>
+              <Grid item xs={12} sm={6} md={4}></Grid>
               <Grid item xs={12} sm={12} md={12}></Grid>
               <Grid item xs={12} sm={12} md={12}>
                 <HomepageImage/>

@@ -6,8 +6,8 @@ const Blog = () =>
             <>
                     <Typography variant="h2" align="center"><u>Fundamentals</u></Typography>
                 <Grid container spacing={2} align="center" justify="center" alignItems="center">
-                    <Grid item xs={12} sm={12} md={4}></Grid>
-                    <Grid item xs={12} sm={12} md={4}>
+                    <Grid item xs={12} sm={6} md={4}></Grid>
+                    <Grid item xs={12} sm={6} md={4}>
                     <Typography variant="h6" align="left">Category 1: Fundamentals of Hashing</Typography>
                     <Typography><u>What is Hashing?</u></Typography>
                     <Typography align="left">
@@ -37,7 +37,7 @@ const Blog = () =>
                     </Typography>
                     
                     </Grid>
-                    <Grid item xs={12} sm={12} md={4}></Grid>
+                    <Grid item xs={12} sm={6} md={4}></Grid>
                 </Grid>
             </>
 
