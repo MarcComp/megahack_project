@@ -1,15 +1,25 @@
 // Home.js
 import React, { useState, useEffect } from 'react';
 import HomepageImage from '../components/HomepageImage';
+import RevealedHash from '../components/RevealedHash';
 import { Typography, Grid, Button, TextField} from '@mui/material';
 
 
 
 const Home = () => {
   const [textFieldValue, setTextFieldValue] = useState('');
+  const [hashName, setHashName] = useState('');
+  const [hashText, setHashText] = useState('');
+  const [isVisible, setIsVisible] = useState(false);
 
   const handleButtonClick = async () => {
     try {
+      if (textFieldValue === "") {
+        setIsVisible(false);
+        alert("Input cannot be empty.");
+        return;
+      }
+
       // Make a fetch request
       const response = await fetch(`http://172.206.255.161:8080/hash/${textFieldValue}`);
       
@@ -20,6 +30,10 @@ const Home = () => {
 
       // Parse the response JSON
       const data = await response.json();
+      setHashName(data.hashName);
+      setHashText(data.hashResult);
+      setIsVisible(true);
+      setTextFieldValue("");
 
       // Print the results in the console
       console.log('Fetched data:', data);
@@ -60,6 +74,7 @@ const Home = () => {
                   id="outlined-multiline-static"
                   label="Input Hash Here"
                   multiline
+                  required
                   rows={8}
                   value={textFieldValue}
                   onChange={(e) => setTextFieldValue(e.target.value)}
@@ -68,13 +83,15 @@ const Home = () => {
               <Grid item xs={12} sm={12} md={2}>
                 <Button variant="outlined" onClick={handleButtonClick}>De-Hash</Button>
               </Grid>
-              <Grid item xs={12} sm={12} md={2}></Grid>
+              <Grid item xs={12} sm={12} md={2}>
+                <RevealedHash shouldRender={isVisible} hashName={hashName} hashText={hashText}/>
+              </Grid>
               <Grid item xs={12} sm={12} md={2}></Grid>
               <Grid item xs={12} sm={12} md={2}></Grid>
               
               <Grid item xs={12} sm={12} md={12}></Grid>
               <Grid item xs={12} sm={12} md={4}></Grid>
-              <Grid item xs={12} sm={12} md={4}> The hash type is:hashtypevariable. The plain text of the hash is:plaintextvariable.</Grid>
+              <Grid item xs={12} sm={12} md={4}></Grid>
               <Grid item xs={12} sm={12} md={4}></Grid>
               <Grid item xs={12} sm={12} md={12}></Grid>
               <Grid item xs={12} sm={12} md={12}>
