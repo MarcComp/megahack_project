@@ -3,7 +3,6 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import { Link, useLocation } from "react-router-dom";
-import HistoryDrawer from "./HistoryDrawer";
 
 const NavBar = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -50,7 +49,6 @@ const NavBar = () => {
           </Button>
         </Toolbar>
       </AppBar>
-      <HistoryDrawer toggleDrawer={toggleDrawer} openDrawer={openDrawer}/>
     </React.Fragment>
   );
 };
